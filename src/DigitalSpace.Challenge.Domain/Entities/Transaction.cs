@@ -56,6 +56,7 @@ public class Transaction : Entity
         DateTimeCreated = dateTimeCreated;
         DateTimeFilling = dateTimeFilling;
         VehicleId = vehicle.Id;
+        Vehicle = vehicle;
         PumpId = pump?.Id;
     }
     
