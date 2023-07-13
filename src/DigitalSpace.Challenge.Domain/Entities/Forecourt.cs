@@ -21,4 +21,9 @@ public class Forecourt : Entity
     {
         _lanes.Add(lane);
     }
+    
+    #region EF Constructor
+    // ReSharper disable once UnusedMember.Local
+    private Forecourt() { }
+    #endregion
 }

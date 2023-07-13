@@ -32,6 +32,7 @@ public class Transaction : Entity
     public DateTimeOffset? DateTimeCompleted { get; private set; }
     
     public Guid VehicleId { get; }
+    public Vehicle Vehicle { get; } = null!;
     public Guid? PumpId { get; }
 
     internal Transaction(
@@ -49,4 +50,9 @@ public class Transaction : Entity
         VehicleId = vehicle.Id;
         PumpId = pump?.Id;
     }
+    
+    #region EF Constructor
+    // ReSharper disable once UnusedMember.Local
+    private Transaction() { }
+    #endregion
 }

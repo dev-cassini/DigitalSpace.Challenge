@@ -20,4 +20,9 @@ public class Pump : Entity
         LaneId = lane.Id;
         Lane = lane;
     }
+    
+    #region EF Constructor
+    // ReSharper disable once UnusedMember.Local
+    private Pump() { }
+    #endregion
 }

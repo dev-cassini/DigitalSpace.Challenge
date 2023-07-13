@@ -23,4 +23,9 @@ public class Lane : Entity
     {
         _pumps.Add(pump);
     }
+    
+    #region EF Constructor
+    // ReSharper disable once UnusedMember.Local
+    private Lane() { }
+    #endregion
 }
