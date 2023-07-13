@@ -20,6 +20,7 @@ internal static class ServiceCollectionExtensions
     {
         serviceCollection.AddScoped<IForecourtRepository, EfForecourtRepository>();
         serviceCollection.AddScoped<IVehicleRepository, EfVehicleRepository>();
+        serviceCollection.AddScoped<ITransactionRepository, EfTransactionRepository>();
     }
     
     internal static void AddSeedDataService(this IServiceCollection serviceCollection)
