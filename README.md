@@ -2,6 +2,34 @@
 
 ASP.NET Core 7 application simulating a petrol station with API.
 
+### Summary ###
+
+#### Rules ####
+
+- A new vehicle of a random type is created every 1500 to 2200 milliseconds with 
+a random supported fuel type and a random amount of fuel between 0 and a quarter 
+of the vehicles tank capacity.
+- If one of the nine pumps is free then the vehicle immediately occupies that pump 
+and fills their tank to full capacity.
+- If no pump is free then the vehicle waits until one becomes free.
+
+#### ToDo ####
+
+- Take into consideration the pumps within a lane when deciding if a pump is free. 
+If a pump is in use then all pumps within the lane are blocked and classed as in use.
+- Vehicles waiting for a random amount of time between one and two seconds rage quit 
+and leave the forecourt without fueling.
+- A limitation with the mechanism used to feed the system with randomly generated vehicles 
+means that the time between each vehicle creation is constant and not random. Only the 
+initial selection of a time between 1500 and 2200 milliseconds is randomised. This might 
+be available as a feature in .NET8? https://github.com/dotnet/runtime/issues/60384
+- Hangfire (the package used to manage scheduling) is not happy when the application 
+is restarted. Before every restart, the Hangfire DB tables must be dropped:
+
+```postgresql
+drop schema hangfire cascade;
+```
+
 ### Entity Framework ###
 
 #### Migrations ####
