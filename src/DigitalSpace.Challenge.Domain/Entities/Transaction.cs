@@ -34,6 +34,9 @@ public class Transaction : Entity
     public Guid VehicleId { get; }
     public Vehicle Vehicle { get; } = null!;
     public Guid? PumpId { get; }
+    
+    public DateTimeOffset? CompletionDateTime => DateTimeFilling?
+        .AddSeconds((double)((Vehicle.TankCapacity - Vehicle.FuelLevel) / Pump.FuelDispenseRate));
 
     internal Transaction(
         Guid id, 
@@ -49,6 +52,13 @@ public class Transaction : Entity
         DateTimeFilling = dateTimeFilling;
         VehicleId = vehicle.Id;
         PumpId = pump?.Id;
+    }
+    
+    internal void Complete()
+    {
+        Console.WriteLine($"Complete transaction - utcNow={DateTimeOffset.UtcNow}, CompletionDateTime={CompletionDateTime}");
+        Status = TransactionStatus.Completed;
+        DateTimeCompleted = CompletionDateTime;
     }
     
     #region EF Constructor

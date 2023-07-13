@@ -48,6 +48,15 @@ public class Forecourt : Entity
             transaction.Status));
     }
     
+    public void VehicleFueled(Guid vehicleId)
+    {
+        var transaction = _transactions.Single(x => x.VehicleId == vehicleId && x.Status is TransactionStatus.Filling);
+        transaction.Complete();
+        
+        var pump = Lanes.SelectMany(x => x.Pumps).Single(x => x.VehicleId == vehicleId);
+        pump.Release();
+    }
+    
     #region EF Constructor
     // ReSharper disable once UnusedMember.Local
     private Forecourt() { }

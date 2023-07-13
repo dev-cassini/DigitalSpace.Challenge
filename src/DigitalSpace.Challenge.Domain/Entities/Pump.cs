@@ -28,6 +28,11 @@ public class Pump : Entity
         VehicleId = vehicle.Id;
     }
     
+    public void Release()
+    {
+        VehicleId = null;
+    }
+    
     #region EF Constructor
     // ReSharper disable once UnusedMember.Local
     private Pump() { }
