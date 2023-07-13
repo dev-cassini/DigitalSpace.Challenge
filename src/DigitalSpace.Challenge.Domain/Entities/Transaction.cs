@@ -56,7 +56,6 @@ public class Transaction : Entity
     
     internal void Complete()
     {
-        Console.WriteLine($"Complete transaction - utcNow={DateTimeOffset.UtcNow}, CompletionDateTime={CompletionDateTime}");
         Status = TransactionStatus.Completed;
         DateTimeCompleted = CompletionDateTime;
     }
