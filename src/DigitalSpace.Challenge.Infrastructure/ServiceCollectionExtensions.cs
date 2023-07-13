@@ -1,5 +1,6 @@
 using DigitalSpace.Challenge.Infrastructure.Messaging.MediatR;
 using DigitalSpace.Challenge.Infrastructure.Persistence;
+using DigitalSpace.Challenge.Infrastructure.Queries;
 using DigitalSpace.Challenge.Infrastructure.Scheduling.Hangfire;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -15,9 +16,10 @@ public static class ServiceCollectionExtensions
         serviceCollection.AddPersistence(configuration);
         serviceCollection.AddRepositories();
         serviceCollection.AddSeedDataService();
+        serviceCollection.AddQueries();
         serviceCollection.AddMediatR();
         serviceCollection.AddHangfire(configuration);
-
+        
         return serviceCollection;
     }
 }

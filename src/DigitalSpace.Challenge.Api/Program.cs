@@ -1,3 +1,4 @@
+using DigitalSpace.Challenge.Api;
 using DigitalSpace.Challenge.Api.BackgroundServices;
 using DigitalSpace.Challenge.Infrastructure;
 using DigitalSpace.Challenge.Infrastructure.Persistence;
@@ -23,5 +24,7 @@ if (app.Environment.IsProduction() is false)
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+
+app.RegisterEndpoints();
 
 await app.RunAsync();
