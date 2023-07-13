@@ -30,6 +30,11 @@ public class Transaction : Entity
     /// When the transaction status moved to <see cref="TransactionStatus.Completed"/>.
     /// </summary>
     public DateTimeOffset? DateTimeCompleted { get; private set; }
+
+    /// <summary>
+    /// Number of litres dispensed to the <see cref="Vehicle"/>.
+    /// </summary>
+    public int NumberOfLitresDispensed { get; private set; }
     
     public Guid VehicleId { get; }
     public Vehicle Vehicle { get; } = null!;
@@ -58,6 +63,7 @@ public class Transaction : Entity
     {
         Status = TransactionStatus.Completed;
         DateTimeCompleted = CompletionDateTime;
+        NumberOfLitresDispensed = Vehicle.TankCapacity - Vehicle.FuelLevel;
     }
     
     #region EF Constructor

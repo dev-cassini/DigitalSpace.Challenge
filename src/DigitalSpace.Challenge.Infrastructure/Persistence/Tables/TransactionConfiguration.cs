@@ -15,6 +15,7 @@ public class TransactionConfiguration : IEntityTypeConfiguration<Transaction>
         builder.Property(x => x.DateTimeCreated);
         builder.Property(x => x.DateTimeFilling);
         builder.Property(x => x.DateTimeCompleted);
+        builder.Property(x => x.NumberOfLitresDispensed);
 
         builder.HasOne(x => x.Vehicle)
             .WithMany()

@@ -9,7 +9,7 @@ ASP.NET Core 7 application simulating a petrol station with API.
 To add a new migration, run the following command from the root of the repository:
 
 ```
-dotnet ef migrations add Initial --startup-project .\src\DigitalSpace.Challenge.Api\ --project .\src\DigitalSpace.Challenge.Infrastructure\ --output-dir .\Persistence\Migrations --context ChallengeDbContext
+dotnet ef migrations add <<MIGRATION_NAME>> --startup-project .\src\DigitalSpace.Challenge.Api\ --project .\src\DigitalSpace.Challenge.Infrastructure\ --output-dir .\Persistence\Migrations --context ChallengeDbContext
 ```
 
 To remove the most recent migration, run the following command from the root of the repository:
