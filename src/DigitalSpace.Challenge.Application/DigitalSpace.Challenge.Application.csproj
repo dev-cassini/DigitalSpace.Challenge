@@ -7,11 +7,11 @@
     </PropertyGroup>
 
     <ItemGroup>
-      <PackageReference Include="Npgsql.EntityFrameworkCore.PostgreSQL" Version="7.0.4" />
+      <PackageReference Include="MediatR" Version="12.1.1" />
     </ItemGroup>
 
     <ItemGroup>
-      <ProjectReference Include="..\DigitalSpace.Challenge.Application\DigitalSpace.Challenge.Application.csproj" />
+      <ProjectReference Include="..\DigitalSpace.Challenge.Domain\DigitalSpace.Challenge.Domain.csproj" />
     </ItemGroup>
 
 </Project>

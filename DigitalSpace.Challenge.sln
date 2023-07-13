@@ -14,6 +14,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalSpace.Challenge.Doma
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalSpace.Challenge.Infrastructure", "src\DigitalSpace.Challenge.Infrastructure\DigitalSpace.Challenge.Infrastructure.csproj", "{842DE518-FB17-46BF-9C6C-EFC92CB9A340}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalSpace.Challenge.Application", "src\DigitalSpace.Challenge.Application\DigitalSpace.Challenge.Application.csproj", "{3F7D14B0-8326-42CF-B8FF-80642EA838A8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -32,10 +34,15 @@ Global
 		{842DE518-FB17-46BF-9C6C-EFC92CB9A340}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{842DE518-FB17-46BF-9C6C-EFC92CB9A340}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{842DE518-FB17-46BF-9C6C-EFC92CB9A340}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F7D14B0-8326-42CF-B8FF-80642EA838A8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F7D14B0-8326-42CF-B8FF-80642EA838A8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F7D14B0-8326-42CF-B8FF-80642EA838A8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F7D14B0-8326-42CF-B8FF-80642EA838A8}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{7A0CC2F4-69D5-4F04-9578-6C59B4F41C44} = {F1CD496C-1D15-4B07-A3BA-38DBB73AD71D}
 		{43C06553-20F4-4BC3-BE76-3F4634157B9B} = {F1CD496C-1D15-4B07-A3BA-38DBB73AD71D}
 		{842DE518-FB17-46BF-9C6C-EFC92CB9A340} = {F1CD496C-1D15-4B07-A3BA-38DBB73AD71D}
+		{3F7D14B0-8326-42CF-B8FF-80642EA838A8} = {F1CD496C-1D15-4B07-A3BA-38DBB73AD71D}
 	EndGlobalSection
 EndGlobal
