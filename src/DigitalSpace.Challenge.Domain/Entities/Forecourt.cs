@@ -1,6 +1,7 @@
 using DigitalSpace.Challenge.Domain.Common;
 using DigitalSpace.Challenge.Domain.Entities.Vehicles;
 using DigitalSpace.Challenge.Domain.Enums;
+using DigitalSpace.Challenge.Domain.Events;
 
 namespace DigitalSpace.Challenge.Domain.Entities;
 
@@ -41,6 +42,10 @@ public class Forecourt : Entity
             freePump);
 
         _transactions.Add(transaction);
+        AddDomainEvent(new VehicleArrivedAtForecourt(
+            vehicle.Id,
+            transaction.Id,
+            transaction.Status));
     }
     
     #region EF Constructor
