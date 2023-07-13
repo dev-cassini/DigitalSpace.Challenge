@@ -8,6 +8,9 @@ public class Forecourt : Entity
 
     private readonly List<Lane> _lanes = new();
     public IReadOnlyList<Lane> Lanes => _lanes.AsReadOnly();
+    
+    private readonly List<Transaction> _transactions = new();
+    public IReadOnlyList<Transaction> Transactions => _transactions.AsReadOnly();
 
     public Forecourt(Guid id)
     {
