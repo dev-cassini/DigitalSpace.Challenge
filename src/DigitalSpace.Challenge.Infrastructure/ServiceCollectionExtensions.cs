@@ -11,5 +11,6 @@ public static class ServiceCollectionExtensions
         IConfiguration configuration)
     {
         serviceCollection.AddPersistence(configuration);
+        serviceCollection.AddSeedDataService();
     }
 }

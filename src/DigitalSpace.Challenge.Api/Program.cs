@@ -7,7 +7,9 @@ builder.Services.AddInfrastructure(builder.Configuration);
 
 var app = builder.Build();
 
-app.Services.MigrateDatabase();
+app.Services
+    .MigrateDatabase()
+    .SeedData();
 
 app.MapGet("/", () => "Hello World!");
 

@@ -1,3 +1,4 @@
+using DigitalSpace.Challenge.Infrastructure.Persistence.Data;
 using DigitalSpace.Challenge.Infrastructure.Persistence.Databases.Postgres;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -11,5 +12,10 @@ internal static class ServiceCollectionExtensions
         IConfiguration configuration)
     {
         serviceCollection.AddPostgresDatabase<ChallengeDbContext>(configuration);
+    }
+    
+    internal static void AddSeedDataService(this IServiceCollection serviceCollection)
+    {
+        serviceCollection.AddScoped<SeedDataService>();
     }
 }
