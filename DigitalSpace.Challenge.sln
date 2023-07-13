@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DigitalSpace.Challenge.Api", "src\DigitalSpace.Challenge.Api\DigitalSpace.Challenge.Api.csproj", "{7A0CC2F4-69D5-4F04-9578-6C59B4F41C44}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{F1CD496C-1D15-4B07-A3BA-38DBB73AD71D}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "SolutionFolder", "SolutionFolder", "{80FD89D6-CA30-40B1-AE36-DF2D1D67B8BB}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		README.md = README.md
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7A0CC2F4-69D5-4F04-9578-6C59B4F41C44}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7A0CC2F4-69D5-4F04-9578-6C59B4F41C44}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7A0CC2F4-69D5-4F04-9578-6C59B4F41C44}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7A0CC2F4-69D5-4F04-9578-6C59B4F41C44}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{7A0CC2F4-69D5-4F04-9578-6C59B4F41C44} = {F1CD496C-1D15-4B07-A3BA-38DBB73AD71D}
+	EndGlobalSection
+EndGlobal
