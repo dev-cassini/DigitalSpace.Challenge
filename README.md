@@ -30,6 +30,20 @@ is restarted. Before every restart, the Hangfire DB tables must be dropped:
 drop schema hangfire cascade;
 ```
 
+### Technologies ###
+
+- [ASP.NET Core 7](https://learn.microsoft.com/en-us/aspnet/core/introduction-to-aspnet-core?view=aspnetcore-7.0)
+- [Entity Framework Core 7](https://learn.microsoft.com/en-us/ef/core/)
+- [MediatR](https://github.com/jbogard/MediatR)
+- [Hangfire](https://github.com/HangfireIO/Hangfire)
+- [NUnit](https://nunit.org/) & [Moq](https://github.com/moq/moq)
+
+### Design ###
+
+- [Domain Driven Design (DDD) & Command Query Responsibility Segregation (CQRS)](https://learn.microsoft.com/en-us/dotnet/architecture/microservices/microservice-ddd-cqrs-patterns/)
+- [Minimal APIs](https://learn.microsoft.com/en-us/aspnet/core/fundamentals/minimal-apis?view=aspnetcore-7.0)
+- [Clean Architecture](https://learn.microsoft.com/en-us/dotnet/architecture/modern-web-apps-azure/common-web-application-architectures#clean-architecture)
+
 ### Entity Framework ###
 
 #### Migrations ####
