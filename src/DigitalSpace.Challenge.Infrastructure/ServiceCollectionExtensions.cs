@@ -12,6 +12,7 @@ public static class ServiceCollectionExtensions
         IConfiguration configuration)
     {
         serviceCollection.AddPersistence(configuration);
+        serviceCollection.AddRepositories();
         serviceCollection.AddSeedDataService();
         serviceCollection.AddMediatR();
     }
