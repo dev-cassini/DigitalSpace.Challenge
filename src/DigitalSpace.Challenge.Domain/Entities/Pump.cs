@@ -1,4 +1,5 @@
 using DigitalSpace.Challenge.Domain.Common;
+using DigitalSpace.Challenge.Domain.Entities.Vehicles;
 
 namespace DigitalSpace.Challenge.Domain.Entities;
 
@@ -10,6 +11,7 @@ public class Pump : Entity
     public const decimal FuelDispenseRate = 1.5m;
     
     public Guid Id { get; }
+    public Guid? VehicleId { get; private set; }
     
     public Guid LaneId { get; }
     public Lane Lane { get; } = null!;
@@ -19,6 +21,11 @@ public class Pump : Entity
         Id = id;
         LaneId = lane.Id;
         Lane = lane;
+    }
+    
+    public void Filling(Vehicle vehicle)
+    {
+        VehicleId = vehicle.Id;
     }
     
     #region EF Constructor
