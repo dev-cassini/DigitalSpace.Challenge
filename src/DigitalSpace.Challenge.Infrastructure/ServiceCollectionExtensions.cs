@@ -8,7 +8,7 @@ namespace DigitalSpace.Challenge.Infrastructure;
 
 public static class ServiceCollectionExtensions
 {
-    public static void AddInfrastructure(
+    public static IServiceCollection AddInfrastructure(
         this IServiceCollection serviceCollection, 
         IConfiguration configuration)
     {
@@ -17,5 +17,7 @@ public static class ServiceCollectionExtensions
         serviceCollection.AddSeedDataService();
         serviceCollection.AddMediatR();
         serviceCollection.AddHangfire(configuration);
+
+        return serviceCollection;
     }
 }

@@ -4,15 +4,24 @@ using DigitalSpace.Challenge.Infrastructure.Persistence;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddInfrastructure(builder.Configuration);
-builder.Services.AddHostedService<PeriodicRandomVehicleBackgroundService>();
+builder.Services
+    .AddEndpointsApiExplorer()
+    .AddSwaggerGen()
+    .AddInfrastructure(builder.Configuration)
+    .AddHostedService<PeriodicRandomVehicleBackgroundService>();
 
 var app = builder.Build();
 
-app.Services
-    .MigrateDatabase()
-    .SeedData();
+app.Services.MigrateDatabase();
+if (app.Environment.IsDevelopment())
+{
+    app.Services.SeedData();
+}
 
-app.MapGet("/", () => "Hello World!");
+if (app.Environment.IsProduction() is false)
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
 
-app.Run();
+await app.RunAsync();
